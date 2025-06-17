@@ -45,14 +45,14 @@ const GiftCarousel = () => {
       {/* Header */}
       <div className="h-screen flex flex-col items-center justify-center snap-start px-6 text-center">
         <div className="animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold text-warm-800 mb-4 font-montserrat">
+          <h1 className="text-4xl md:text-6xl font-bold text-danish-red-500 mb-4 font-montserrat">
             A gift for you!
           </h1>
-          <p className="text-lg md:text-xl text-warm-600 mb-12 font-medium">
+          <p className="text-lg md:text-xl text-danish-red-700 mb-12 font-medium">
             Swipe up to discover your surprises
           </p>
           <div className="animate-bounce-gentle">
-            <ArrowUp className="w-8 h-8 text-warm-500 mx-auto" />
+            <ArrowUp className="w-8 h-8 text-danish-red-500 mx-auto" />
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@ const GiftCarousel = () => {
 
             {/* Gift Text */}
             <div className="text-center mb-8">
-              <p className="text-lg font-medium text-warm-700 leading-relaxed">
+              <p className="text-lg font-medium text-danish-red-800 leading-relaxed">
                 {isUnlocked(gift.id) ? gift.revealedText : gift.initialText}
               </p>
             </div>
@@ -88,7 +88,7 @@ const GiftCarousel = () => {
               <div className="text-center">
                 <Button
                   onClick={() => unlockGift(gift.id)}
-                  className="bg-warm-500 hover:bg-warm-600 text-white px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="bg-danish-red-500 hover:bg-danish-red-600 text-white px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   Unlock
                 </Button>
@@ -99,20 +99,20 @@ const GiftCarousel = () => {
             {isUnlocked(gift.id) && index < gifts.length - 1 && (
               <div className="text-center mt-8">
                 <div className="animate-bounce-gentle">
-                  <ArrowUp className="w-6 h-6 text-warm-400 mx-auto" />
+                  <ArrowUp className="w-6 h-6 text-danish-red-400 mx-auto" />
                 </div>
-                <p className="text-sm text-warm-500 mt-2">Keep swiping up for more surprises!</p>
+                <p className="text-sm text-danish-red-500 mt-2">Keep swiping up for more surprises!</p>
               </div>
             )}
 
             {/* Final message */}
             {isUnlocked(gift.id) && index === gifts.length - 1 && (
               <div className="text-center mt-8 animate-fade-in">
-                <div className="bg-warm-100 rounded-2xl p-6 shadow-lg">
-                  <p className="text-warm-800 font-semibold text-lg mb-2">
+                <div className="bg-danish-red-50 rounded-2xl p-6 shadow-lg border border-danish-red-200">
+                  <p className="text-danish-red-800 font-semibold text-lg mb-2">
                     🎉 That's all your surprises!
                   </p>
-                  <p className="text-warm-600">
+                  <p className="text-danish-red-600">
                     Hope you loved them as much as I loved preparing them for you! ❤️
                   </p>
                 </div>

@@ -63,29 +63,20 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				cream: {
-					50: '#FDF6E3',
-					100: '#F6E6C4',
-					200: '#EEDD9E',
-					300: '#E5D078',
-					400: '#DCC252',
-					500: '#D4B52C',
-					600: '#AA9123',
-					700: '#806D1A',
-					800: '#554911',
-					900: '#2B2408'
-				},
-				warm: {
-					50: '#FEF7F0',
-					100: '#FDEEE1',
-					200: '#FADCC2',
-					300: '#F8CBA4',
-					400: '#F5B985',
-					500: '#F3A867',
-					600: '#C28652',
-					700: '#92653E',
-					800: '#614329',
-					900: '#312215'
+				danish: {
+					red: {
+						50: '#FEF2F2',
+						100: '#FEE2E2',
+						200: '#FECACA',
+						300: '#FCA5A5',
+						400: '#F87171',
+						500: '#C8102E', // Official Danish flag red
+						600: '#B91C1C',
+						700: '#991B1B',
+						800: '#7F1D1D',
+						900: '#651B1B'
+					},
+					white: '#FFFFFF'
 				}
 			},
 			fontFamily: {
