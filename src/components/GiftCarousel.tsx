@@ -13,19 +13,19 @@ interface Gift {
 const gifts: Gift[] = [
   {
     id: 1,
-    image: "https://live.staticflickr.com/65535/51939527503_a543666687_b.jpg",
+    image: "https://25hours-hotels.com/wp-content/uploads/sites/39/2024/09/25hours_copenhagen_neighbourhoof_louisiana.jpg",
     initialText: "An artistic getaway?",
     revealedText: "We're going to the Louisiana! A train trip and tickets for us to spend an incredible day of art, architecture, and nature by the sea."
   },
   {
     id: 2,
-    image: "https://live.staticflickr.com/4568/24755868778_7f2b606f7b_b.jpg",
+    image: "https://cdn.prod.website-files.com/67d0588eac8e396eee987f1b/680644ab9d9b82b39592a124_side-view.jpg",
     initialText: "The key to the city?",
     revealedText: "An annual subscription to Donkey Republic. So you'll always have your orange bike ready to explore every corner of Copenhagen without limits."
   },
   {
     id: 3,
-    image: "https://live.staticflickr.com/65535/48332147331_17e997f3bf_b.jpg",
+    image: "https://images.squarespace-cdn.com/content/v1/63d7aa2819640424ad372e8e/1677504155951-KIMF0PCLITFAP7BKEPX2/Harry%2527s_Place_BF3I0435_export.jpg",
     initialText: "The best bite in CPH?",
     revealedText: "An authentic Flæskestegssandwich from the legendary Harry's Place. Considered the best in the city, with crispy crackling and all the trimmings!"
   }
