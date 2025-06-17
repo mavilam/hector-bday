@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,8 +7,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 45 44% 96%;
+    --foreground: 25 25% 20%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -15,24 +16,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 25 85% 45%;
+    --primary-foreground: 45 44% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 35 40% 90%;
+    --secondary-foreground: 25 25% 20%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 35 40% 90%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 35 40% 85%;
+    --accent-foreground: 25 25% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 30% 85%;
+    --input: 35 30% 85%;
+    --ring: 25 85% 45%;
 
     --radius: 0.5rem;
 
@@ -98,6 +99,17 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-montserrat;
+    background: #FDF6E3;
   }
+}
+
+/* Custom scrollbar for better mobile experience */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure smooth scrolling on all devices */
+html {
+  scroll-behavior: smooth;
 }
