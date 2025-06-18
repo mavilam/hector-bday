@@ -43,7 +43,7 @@ const gifts: Gift[] = [
   {
     id: 999,
     initialText: "¡Desbloquea para ver tu mensaje final!",
-    revealedText: "🎉 ¡Esos son todos tus regalos para un buen viaje a CPH!\n\n¡Espero que te gusten y que no nos llueva demasiado! 🌧️",
+    revealedText: "",
     type: 'final'
   }
 ];
@@ -127,12 +127,13 @@ const GiftCarousel = () => {
             {/* Special styling for the final message */}
             {isUnlocked(gift.id) && gift.type === 'final' && (
               <div className="text-center mt-8 animate-fade-in">
-                <div className="bg-danish-red-50 rounded-2xl p-6 shadow-lg border border-danish-red-200">
-                  <p className="text-danish-red-800 font-semibold text-lg mb-2">
-                    🎉 ¡Esos son todos tus regalos para un buen viaje a CPH!
+                <div className="bg-danish-red-50 rounded-3xl p-10 shadow-2xl border-2 border-danish-red-200 max-w-lg mx-auto">
+                  <p className="text-6xl mb-4 leading-none">🇩🇰</p>
+                  <p className="text-danish-red-800 font-semibold text-2xl mb-2">
+                     Prepara tus outfits y tus Salomon...
                   </p>
-                  <p className="text-danish-red-600">
-                    ¡Espero que te gusten y que no nos llueva demasiado! 🌧️
+                  <p className="text-danish-red-600 text-lg">
+                    ¡Te esperamos a finales de julio en CPH!
                   </p>
                 </div>
               </div>
