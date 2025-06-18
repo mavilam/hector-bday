@@ -39,6 +39,7 @@ const GiftCarousel = () => {
   };
 
   const isUnlocked = (giftId: number) => unlockedGifts.has(giftId);
+  const allGiftsUnlocked = unlockedGifts.size === gifts.length;
 
   return (
     <div className="h-screen overflow-y-auto snap-y snap-mandatory">
@@ -105,22 +106,35 @@ const GiftCarousel = () => {
               </div>
             )}
 
-            {/* Final message */}
-            {isUnlocked(gift.id) && index === gifts.length - 1 && (
-              <div className="text-center mt-8 animate-fade-in">
-                <div className="bg-danish-red-50 rounded-2xl p-6 shadow-lg border border-danish-red-200">
-                  <p className="text-danish-red-800 font-semibold text-lg mb-2">
-                    🎉 ¡Esas son todas tus sorpresas!
-                  </p>
-                  <p className="text-danish-red-600">
-                    ¡Espero que te hayan gustado tanto como a mí me gustó prepararlas para ti! ❤️
-                  </p>
+            {/* Navigation hint for last gift when all are unlocked */}
+            {isUnlocked(gift.id) && index === gifts.length - 1 && allGiftsUnlocked && (
+              <div className="text-center mt-8">
+                <div className="animate-bounce-gentle">
+                  <ArrowUp className="w-6 h-6 text-danish-red-400 mx-auto" />
                 </div>
+                <p className="text-sm text-danish-red-500 mt-2">¡Desliza hacia arriba para ver el mensaje final!</p>
               </div>
             )}
           </div>
         </div>
       ))}
+
+      {/* Final Message Slide */}
+      {allGiftsUnlocked && (
+        <div className="h-screen flex flex-col items-center justify-center snap-start px-6 py-8">
+          <div className="w-full max-w-sm mx-auto text-center animate-fade-in">
+            <div className="bg-danish-red-50 rounded-2xl p-8 shadow-2xl border border-danish-red-200">
+              <div className="text-6xl mb-6">🎉</div>
+              <h2 className="text-danish-red-800 font-bold text-2xl mb-4">
+                ¡Esas son todas tus sorpresas!
+              </h2>
+              <p className="text-danish-red-600 text-lg leading-relaxed">
+                ¡Espero que te hayan gustado tanto como a mí me gustó prepararlas para ti! ❤️
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
